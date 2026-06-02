@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Estilo Aplicativo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-icons/bootstrap-icons/bootstrap-icons.css" integrity="sha384-..." crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #05003f;
+            color: antiquewhite;
+        }
+
+        .bloco {
+            background-color: #000000;
+            padding: 20px;
+            border: 1px solid antiquewhite;
+            display: flex;
+            border-radius: 10px;
+        }
+
+        .mapa{
+            position: relative;
+            left: 150px;
+        }
+
+
+        .menu-principal {
+            background-color: #000000;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .menu-principal ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .menu-principal a {
+            color: antiquewhite;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.8rem;
+            gap: 4px;
+        }
+
+
+        .menu-principal a span {
+            font-size: 0.75rem;
+        }
+
+  
+        .logo { display: none; }
+
+  
+        .menu-principal i {
+            font-size: 1.4rem;
+            color: #edefa0; 
+        }
+
+
+        .grid-container {
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+            grid-template-areas: 
+                "topo"
+                "meio1"
+                "meio2"
+                "meio3"
+                "meio4"
+                "final";
+        }
+
+        .banner{
+            position: relative;
+            left: 175px;
+            top: 20px;
+        }
+
+  
+        .menu-principal {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            border-top: 2px solid #edefa0;
+        }
+
+  
+        .top   { grid-area: topo; }
+        .meio1 { grid-area: meio1; }
+        .meio2 { grid-area: meio2; }
+        .meio3 { grid-area: meio3; }
+        .meio4 { grid-area: meio4; }
+        .final { grid-area: final; }
+
+  
+        @media (min-width: 768px) { 
+            .grid-container {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas: 
+                    "menu   menu   menu   menu" 
+                    "topo   topo   topo   topo"
+                    "meio1  meio2  meio3  meio4"
+                    "final  final  final  final";
+                padding: 20px;
+                gap: 15px;
+            }
+
+
+            .menu-principal {
+                grid-area: menu;
+                position: static; 
+                height: 120px;
+                padding: 0 40px;
+                border-top: none;
+                border-bottom: 2px solid #edefa0;
+            }
+
+            .menu-principal ul {
+                width: auto;
+                gap: 30px;
+            }
+
+  
+            .menu-principal a {
+                flex-direction: row;
+                font-size: 1rem;
+                gap: 8px;
+            }
+
+   
+            .logo {
+                display: block;
+                font-weight: bold;
+                font-size: 1.5rem;
+                color: #edefa0;
+            }
+        }
+
+
+        .img-fluid {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="menu-principal">
+        <img src="img/LogoHamburguer.png" width="120px" height="120px">
+        <div class="logo"> BurgerClub</div>
+        <ul>
+            <li><a href="#home"><i class="bi bi-house-door"></i><span>Home</span></a></li>
+            <li><a href="#cardapio"><i class="bi bi-egg-fried"></i><span>Cardápio</span></a></li>
+            <li><a href="#contato"><i class="bi bi-whatsapp"></i><span>Pedir</span></a></li>
+            <li><a href="#sobre"><i class="bi bi-info-circle"></i><span>Sobre</span></a></li>
+        </ul>
+    </nav>
+
+    <main class="grid-container">
+        <div class="top bloco">
+            <img src="img/burguer.jpg" class="img-fluid" alt="Hambúrguer">
+        </div>
+        
+        <div id="sobre" class="meio1 bloco">
+            <h3>Eventos</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi libero quam, aut molestias fugiat. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed asperiores dolorem molestias placeat repellendus ducimus omnis officia aut itaque nemo laudantium repudiandae eligendi iure esse, dicta pariatur beatae et voluptas?</p>
+        </div>
+        
+        <div id="cardapio" class="meio2 bloco">
+            <h3>Lanches e Porções</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nosso cardápio conta com os melhores blends artesanais da região. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam commodi quibusdam asperiores sapiente labore nesciunt beatae eligendi inventore voluptates, fugiat delectus animi non velit ea ut suscipit, alias laboriosam.</p>
+        </div>
+        
+        <div class="meio3 bloco">
+            <h3>Nossos Espaços</h3>
+            <p>Ambiente climatizado e área kids para sua famíliiente climatizado e área kids para sua família. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, ea quia asperiores, tenetur quis libero vel sunt voluptates nesciunt nostrum consequuntur maiores tempore quibusdam, nisi rem labore quisquam provident mollitia?</p>
+        </div>
+
+        <div id="sobre" class="meio4 bloco">
+            <h3>Sobre Nós</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi libero quam, aut molestias fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ea dolorem vitae expedita dolores esse, unde commodi suscipit molestiae voluptatum natus nostrum maxime? Qui ratione eligendi harum maiores distinctio quae!</p>
+        </div>
+        
+        <div id="contato" class="final bloco">
+            <p> Terça a Domingo, das 18h às 23h. Av. Principal, 123.</p>
+            <div class="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.8702459271335!2d-3.705097924171815!3d40.43387197143684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422907d222666b%3A0xbd72067cae06430a!2sHUNDRED!5e0!3m2!1spt-BR!2sbr!4v1780407944980!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <img class="banner" src="img/BannerHamburguer.png" width="300px" height="450px">
+        </div>
+    </main>
+
+</body>
+</html>
