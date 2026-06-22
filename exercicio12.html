@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var C = Number(prompt(' Qual o capital? '));
+        var i = Number(prompt(' Qual a taxa? (Em decimais, ex: 2% = 0.02)'));
+        var t = Number(prompt(' Qual o tempo? (Se a taxa for em meses, tempo também em meses) '));
+        var M = C * (1+i) ** t;
+
+        document.write('Seu montante será de ' + M.toFixed(2) + ' reais');
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
