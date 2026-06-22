@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 04</title>
+    <script>
+        var usuario = prompt('Qual seu usuário?');
+        var classe = prompt('Qual classe você se encontra? (1/2/3)');
+        var venda = Number(prompt('Quantos reais você vendeu?'));
+
+        if (classe == '1'){
+            total = 0.025 * venda + 1500
+        }
+        else if (classe == '2'){
+            total = 2000 + 0.03 * venda
+        }
+        else if (classe == '3'){
+            total = 2500 + 0.035 * venda
+        }
+        document.write ('Você irá receber ' + total + ' reais');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
