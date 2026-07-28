@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Digital - Terminal Seguro</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f0f2f5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    width:420px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.botoes{
+    margin-top:25px;
+    display:flex;
+    justify-content:space-between;
+}
+
+button{
+    width:48%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+    font-size:15px;
+}
+
+#confirmar{
+    background:#008080;
+}
+
+button[type="reset"]{
+    background:#999;
+}
+
+button:hover{
+    opacity:.9;
+}
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Banco Digital - Terminal Seguro</h1>
+
+        <form>
+            <label>Nome</label>
+            <input type="text" placeholder="Digite seu nome">
+
+            <label>CPF</label>
+            <input type="text" placeholder="Digite seu CPF">
+
+            <label>Valor (R$)</label>
+            <input type="number" placeholder="Valor da operação">
+
+            <div class="botoes">
+                <button type="button" id="confirmar">
+                    Confirmar Operação
+                </button>
+
+                <button type="reset">
+                    Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
