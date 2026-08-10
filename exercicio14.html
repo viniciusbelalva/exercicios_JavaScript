@@ -1,17 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Exercício 14 - JS</title>
+    <style>
+        .margin{
+            margin: 20px;
+        }
+    </style>
     <script>
-
-        var nome = (prompt(' Qual seu nome? '));
-        document.write(nome.toLocaleUpperCase() + '</br>' );
-            
+        function mod_cor(cor){
+            document.getElementById('texto').style.color = cor
+            }
+        function mod_fonte(fonte){
+            document.getElementById('texto').style.fontFamily = fonte
+            }
+        function mod_tamanho(tamanho){
+            document.getElementById('texto').style.fontSize = tamanho
+            }
+            function mod_estilo(estilo){
+            document.getElementById('texto').style.fontStyle = estilo
+            }
+            function mod_weight(weight){
+            document.getElementById('texto').style.fontWeight = weight
+            }
     </script>
 </head>
 <body>
-    
+    <div class="margin">
+        <h4>Texto</h4>
+        <p id="texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae neque quaerat nulla sed numquam, quis sequi provident at similique, iste perferendis autem suscipit. Quia doloribus eos alias quidem repudiandae quaerat.
+        </p>
+        <hr>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Cor</label>
+            <select onchange="mod_cor(value)"  class="form-control" id="exampleFormControlSelect1">
+                <option value='#000000'>Preto</option>
+                <option value='#0000FF'>Azul</option>
+                <option value='#FF0000'>Vermelho</option>
+                <option value='#00FF00'>Verde</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Fonte</label>
+            <select onchange="mod_fonte(value)"  class="form-control" id="exampleFormControlSelect1">
+                <option value='Arial'>Arial</option>
+                <option value='Verdana'>Verdana</option>
+                <option value='Times'>Times</option>
+             </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Tamanho</label>
+            <select onchange="mod_tamanho(value)"  class="form-control" id="exampleFormControlSelect1">
+                <option value='16px'>16</option>
+                <option value='18px'>18</option>
+                <option value='20px'>20</option>
+                <option value='22px'>22</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Estilo</label>
+            <select onchange="mod_estilo(value)"  class="form-control" id="exampleFormControlSelect1">
+                <option value='normal'>Normal</option>
+                <option value='italic'>Itálico</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Weight</label>
+            <select onchange="mod_weight(value)"  class="form-control" id="exampleFormControlSelect1">
+                <option value='normal'>Normal</option>
+                <option value='bold'>Negrito</option>
+            </select>
+        </div>
+    </div>
 </body>
 </html>
