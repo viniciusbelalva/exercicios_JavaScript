@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bloco{
+            padding: 10px;
+            background-color: grey;
+            width: 40%;
+            margin: auto;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .bloco input{
+        margin: 10px auto;
+        width: 94%;
+        padding: 10px; 
+        }
+    
+        .bloco button{
+        padding: 10px;
+        width: 24%;
+        }
+    </style>
+</head>
+<body>
+    <div class="bloco">
+        <h1> Desafio 06 </h1>
+        <input type="text" id="entrada" placeholder="Digite o valor de entrada"><br>
+        <button id="Add" onclick="adicionarvalor()">Adicionar</button>
+        <button>Ordenar</button>
+        <button>Deletar</button>
+        <button>Pesquisar</button><br>
+        <input type="textarea" id="saida" disabled="disabled">
+    </div>
+    
+    <script>
+            var lista = []
+            function adicionarvalor(){
+                var ent = document.getElementById('entrada').value
+                lista.unshift(ent);
+                document.getElementById('saida').value = lista;
+                document.getElementById('entrada').value = null;
+            }
+    </script>
+</body>
+</html>
